@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: website
-          image: sarvesh8415/fluxcd-gitops-lab:1.0.2 # {"$imagepolicy": "flux-system:gitops-website"}
+          image: sarvesh8415/fluxcd-gitops-lab:1.0.3 # {"$imagepolicy": "flux-system:gitops-website"}
           ports:
             - name: http
               containerPort: 80
