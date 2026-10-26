@@ -19,8 +19,6 @@ spec:
       messageTemplate: "Update website image to {{range .Updated.Images}}{{.}}{{end}}"
     push:
       branch: main
-      secretRef:
-        name: github-writeback
   update:
     path: ./apps/website
     strategy: Setters
