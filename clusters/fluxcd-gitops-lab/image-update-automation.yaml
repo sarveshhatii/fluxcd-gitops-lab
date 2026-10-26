@@ -1,0 +1,26 @@
+apiVersion: image.toolkit.fluxcd.io/v1
+kind: ImageUpdateAutomation
+metadata:
+  name: gitops-website
+  namespace: flux-system
+spec:
+  interval: 1m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+  git:
+    checkout:
+      ref:
+        branch: main
+    commit:
+      author:
+        name: Flux Image Automation
+        email: flux-image-automation@users.noreply.github.com
+      messageTemplate: "Update website image to {{range .Updated.Images}}{{.}}{{end}}"
+    push:
+      branch: main
+      secretRef:
+        name: github-writeback
+  update:
+    path: ./apps/website
+    strategy: Setters

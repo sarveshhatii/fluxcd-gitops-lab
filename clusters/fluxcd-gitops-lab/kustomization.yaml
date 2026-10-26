@@ -5,3 +5,4 @@ resources:
   - ../../apps/website
   - ./image-repository.yaml
   - ./image-policy.yaml
+  - ./image-update-automation.yaml
