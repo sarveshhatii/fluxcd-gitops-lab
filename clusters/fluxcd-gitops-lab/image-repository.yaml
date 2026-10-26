@@ -1,0 +1,8 @@
+apiVersion: image.toolkit.fluxcd.io/v1
+kind: ImageRepository
+metadata:
+  name: gitops-website
+  namespace: flux-system
+spec:
+  image: sarvesh8415/fluxcd-gitops-lab
+  interval: 1m

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gitops-website
+  namespace: gitops-demo
+spec:
+  type: ClusterIP
+  selector:
+    app: gitops-website
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
