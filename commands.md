@@ -3,6 +3,12 @@
 This guide documents the local Windows PowerShell workflow for the
 FluxCD GitOps website project. Each command includes its purpose.
 
+
+git add .
+git commit -m "Update website"
+git pull --rebase origin main
+git push origin main
+
 ## Project details
 
 -   Repository folder:
